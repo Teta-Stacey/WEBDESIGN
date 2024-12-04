@@ -1,0 +1,326 @@
+:root {
+    --color-dark: #1a1a2e;
+    --color-light: #f4f4f4;
+    --secondary-color: #16213e;
+    --accent-color: #ff6b6b;
+    --text-color: #0f3460;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-dark) 0%, #2d4059 100%);
+    color: var(--color-light);
+    padding: 0 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    transition: transform var(--transition-speed);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navlinks ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.navlink a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.navlink a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width var(--transition-speed);
+}
+
+.navlink a:hover {
+    color: var(--accent-color);
+}
+
+.navlink a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-left {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-text {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hero-left p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: var(--color-light);
+}
+
+.signup-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+    box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+}
+
+.signup-btn:hover {
+    background-color: #ff4757;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255,107,107,0.4);
+}
+
+.image-holder {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform var(--transition-speed);
+}
+
+.image-holder:hover {
+    transform: scale(1.05);
+}
+
+.image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.information {
+    padding: 100px 10%;
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.information h1 {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.information h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--accent-color);
+}
+
+.cards-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.img-card {
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.card:hover .img-card img {
+    transform: scale(1.1);
+}
+
+.card span {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.quote {
+    background-color: var(--secondary-color);
+    color: var(--color-light);
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.quote-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote-msg {
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-owner {
+    font-weight: 600;
+    text-align: right;
+}
+
+.action-section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 10%;
+    background-color: var(--color-light);
+}
+
+.call-to-action {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff4757 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 60px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.action-btn {
+    background-color: white;
+    color: var(--accent-color);
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+}
+
+.action-btn:hover {
+    background-color: var(--color-light);
+    transform: scale(1.05);
+}
+
+.footer-section {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    padding: 30px 10%;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero, .call-to-action {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        font-size: 42px;
+    }
+
+    .call-to-action {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .call-to-action .action-right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section, .information, .quote, .action-section {
+        padding: 50px 5%;
+    }
+
+    .hero-text {
+        font-size: 36px;
+    }
+
+    .cards-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 850px) {
+    /* Keep existing mobile menu styles from the original CSS */
+    /* ... */
+}
